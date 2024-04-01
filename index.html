@@ -8,12 +8,31 @@
         <link rel="shortcut icon" type="image/png" href="ic.png">
         <link rel="stylesheet" href='./files/style.css'>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+
+@media (max-width: 768px) {
+    section.about {
+      /* Specific styles for phone layout here */
+      /* Adjust these as needed for your design */
+      font-size: 14px; /* Reduce font size */
+      line-height: 1.5; /* Adjust line spacing */
+      padding: 1rem; /* Add padding for better readability */
+      .about-img {
+        width: 100%; /* Ensure image fills width */
+      }
+      .about-text {
+        /* Adjust content layout for smaller screens */
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+</style>
+        </style>
         <SCript>
             function getDeviceDimensions() {
   // كشف نوع الجهاز
-  const isDesktop = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
+  const isDesktop = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
     ? false
     : true;
 
@@ -80,6 +99,7 @@ element.style.height = `${deviceDimensions.height}px`;
                     <a href="https://www.snapchat.com/add/a3ats?share_id=RcrITGti-zw&locale=ar-EG"style="--i:8" target="_blank"><i class='bx bxl-snapchat' ></i></a>
                     <a href="https://api.whatsapp.com/send?phone=+967716226912"style="--i:9" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                     <a href="https://github.com/5a3"style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3/pfbid0k8TmdPYmUZrsdcN5crMQBcBuRWtgyJmn9eMQqTncFbC3ZjviVaaaSiNuAQkRpMpXl/?mibextid=ZbWKwL"style="--i:10" target="_blank"><i class='bx bxl-facebook'></i></a>
                 </div>
                 <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" style="--i:11" class="btn-box" target="_blank">Download CV</a>
             </div>
@@ -169,6 +189,7 @@ element.style.height = `${deviceDimensions.height}px`;
                     <a href="https://www.snapchat.com/add/a3ats?share_id=RcrITGti-zw&locale=ar-EG"style="--i:8" target="_blank"><i class='bx bxl-snapchat' ></i></a>
                     <a href="https://api.whatsapp.com/send?phone=+967716226912"style="--i:9" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                     <a href="https://github.com/5a3"style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3/pfbid0k8TmdPYmUZrsdcN5crMQBcBuRWtgyJmn9eMQqTncFbC3ZjviVaaaSiNuAQkRpMpXl/?mibextid=ZbWKwL"style="--i:10" target="_blank"><i class='bx bxl-facebook'></i></a>
                 </div>
             </div>
             
