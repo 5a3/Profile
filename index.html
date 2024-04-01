@@ -4,14 +4,52 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profile</title>
+        <title>AHMED-ALATTAS|Profile</title>
         <link rel="shortcut icon" type="image/png" href="ic.png">
         <link rel="stylesheet" href='./files/style.css'>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <SCript>
+            function getDeviceDimensions() {
+  // كشف نوع الجهاز
+  const isDesktop = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? false
+    : true;
+
+  // تحديد مقاسات الجهاز
+  const dimensions = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+
+  // عودة مقاسات الجهاز
+  if (isDesktop) {
+    // مقاسات سطح المكتب
+    dimensions.width = 1200;
+    dimensions.height = 800;
+  } else {
+    // مقاسات الهاتف المحمول
+    dimensions.width = 375;
+    dimensions.height = 667;
+  }
+
+  return dimensions;
+}
+
+// استدعاء الدالة واستخدامها
+const deviceDimensions = getDeviceDimensions();
+
+// استخدام مقاسات الجهاز
+const element = document.getElementById("my-element");
+element.style.width = `${deviceDimensions.width}px`;
+element.style.height = `${deviceDimensions.height}px`;
+
+        </SCript>
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         
     </head>
-    <body>
+    <body class="col-xs-12">
         
         <header class="header">
             
