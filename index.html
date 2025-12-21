@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eng. Ahmed Mohammed Al-Attas</title>
-  <meta name="description" content="Official website of Eng. Ahmed Mohammed Al-Attas - IT Engineer and Software Developer" />
+  <title>Eng. Ahmed Mohammed Al-Attas | IT Engineer & Developer</title>
+  <meta name="description" content="Official website of Eng. Ahmed Mohammed Al-Attas - IT Engineer and Software Developer specializing in Flutter & Firebase" />
   <meta name="author" content="Ahmed Mohammed Al-Attas" />
   <meta property="og:title" content="Ahmed Mohammed Al-Attas" />
   <meta property="og:description" content="IT Engineer specialized in app and web development - Flutter & Firebase" />
@@ -14,139 +14,450 @@
   <link rel="shortcut icon" type="image/png" href="ic.png" />
   <link rel="stylesheet" href="./files/style.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body class="col-xs-12">
-
-  <header class="header">
-    <a href="#" class="logo">Ahmed Al-Attas</a>
-    <nav class="navbar" id="myLinks">
-      <a href="#Home" style="--i:1" class="active">Home</a>
-      <a href="#About" style="--i:2">About</a>
-      <a href="#Skills" style="--i:3">Skills</a>
-      <a href="#Experience" style="--i:4">Experience Works</a>
-      <a href="#Contact" style="--i:5">Contact</a>
-    </nav>
-  </header>
-
-  <section class="home" id="Home">
-    <div class="home-content">
-      <h3>Hello, It's Me</h3>
-      <h1>AHMED MOHAMMED AL-ATTAS</h1>
-      <h4 style="--i:6">I'm an IT Engineer specialized<br></h4>
-      <h4 style="--i:6">Software Developer</h4>
-      <h4 style="--i:6">TS-EBS</h4>
-      <div class="img">
-        <img src="./img/cropedpic.jpg" class="responsive" style="height: 450px; width: 450px;" />
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Ahmed Al-Attas</a>
+      <div class="nav-menu" id="navMenu">
+        <a href="#Home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+        <a href="#About" class="nav-link"><i class="fas fa-user"></i> About</a>
+        <a href="#Skills" class="nav-link"><i class="fas fa-code"></i> Skills</a>
+        <a href="#Experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#Contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
       </div>
-      <div class="home-sci">
-        <a href="https://www.instagram.com/AHMED_ALATTAS910/" target="_blank"><i class='bx bxl-instagram'></i></a>
-        <a href="https://www.snapchat.com/add/a3ats" target="_blank"><i class='bx bxl-snapchat'></i></a>
-        <a href="https://api.whatsapp.com/send?phone=+967716226912" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-        <a href="https://github.com/5a3" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" target="_blank"><i class='bx bxl-facebook'></i></a>
-      </div>
-      <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-box" target="_blank">Download CV</a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </section>
+  </nav>
 
-  <section>
-    <div class="about" id="About">
-      <div class="about-img">
-        <img src="./img/midclg.jpg" class="abt-res" />
+  <!-- Hero Section -->
+  <section class="hero" id="Home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="text-animation">
+          <span class="greeting">Hello, It's Me</span>
+          <h1 class="hero-title">AHMED MOHAMMED<br><span class="highlight">AL-ATTAS</span></h1>
+          <div class="typing-container">
+            <span class="typed-text">I'm an </span>
+            <span class="auto-type"></span>
+          </div>
+          <p class="hero-subtitle">IT Engineer & Software Developer specialized in mobile and web applications</p>
+          
+          <div class="hero-buttons">
+            <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-primary" target="_blank">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="#Contact" class="btn-secondary">
+              <i class="fas fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="social-link" target="_blank" title="Instagram">
+              <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+967716226912" class="social-link" target="_blank" title="WhatsApp">
+              <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://github.com/5a3" class="social-link" target="_blank" title="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="social-link" target="_blank" title="Facebook">
+              <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.snapchat.com/add/a3ats" class="social-link" target="_blank" title="Snapchat">
+              <i class='bx bxl-snapchat'></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="about-text">
-        <h2>About <span>Me</span></h2>
-        <p>
-          <h3 style="margin-bottom: 12px; color: #0ef;">Personal Information:</h3><br>
-          Full Name: Ahmed Mohammed Salem Al-Attas<br>
-          Phone Number: +967716226912 / +967770985114<br>
-          Email: aahmedmohammed75@gmail.com
-          <br><h3 style="margin-top: 12px; color: #0ef;">Education:</h3><br>
-          Bachelor of Information Technology - Hadhramaut University, College of Computer and IT (2020 - 2024 expected)
-          <h3 style="margin-top: 12px; color: #0ef;">Certifications:</h3><br>
-          Cybersecurity,<br> Artificial Intelligence,<br> Time Management,<br> Media & Data Literacy,<br> Social Confidence,<br> Device Protection,<br> Countering Digital Threats – by Evit Services, Top Arab Institute & others.
-          <br><br>
-          <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="abtbtn-box" target="_blank">Download CV</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="Skills" id="Skills">
-      <div class="skills-text" style="text-align: center;">
-        <h1 class="subtitle">My <span>Skills</span></h1>
-        <p>
-          <h3 style="margin-bottom: 12px; color: #0ef;">Language Skills</h3><br>
-          <ul>
-            <li>Arabic (Native) - Excellent</li>
-            <li>English (Good) - Intermediate level</li>
-          </ul>
-          <br><h3 style="margin-top: 12px; color: #0ef;">Technical Skills</h3><br>
-          <ul>
-            <li>Programming: Python, PHP, C#, Dart</li>
-            <li>Databases: SQL Server, MySQL, Oracle, NoSQL</li>
-            <li>Frameworks: Flutter, Laravel, ASP.NET</li>
-            <li>Tools: Git, GitHub</li>
-            <li>Operating Systems: Windows, Linux</li>
-          </ul>
-          <h3 style="margin-top: 12px; color: #0ef;">Soft Skills</h3><br>
-          <ul>
-            <li>Communication, Teamwork, Time Management</li>
-            <li>Problem Solving, Fast Learner, Adaptability</li>
-          </ul>
-          <br>
-          <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="abtbtn-box" target="_blank">Download CV</a>
-        </p>
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="./img/cropedpic.jpg" alt="Ahmed Al-Attas" class="profile-img" />
+          <div class="image-overlay"></div>
+          <div class="floating-shape shape-1"></div>
+          <div class="floating-shape shape-2"></div>
+          <div class="floating-shape shape-3"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Works Section -->
-  <section>
-    <div class="about-text" id="Experience" style="max-width: 800px; margin: 50px auto;">
-     <h4> <h2>Experience <span>Works</span></h2></h4>
-      <ul style="line-height: 1.8; font-size: 1.1rem; color: #eee; padding-left: 20px;">
-        <li>Member of the Yemeni Information and Communications Technology Federation<br>
-          Contributor to the development and support of the technology sector in the community</li><br>
-        <li><strong>Ebda3 Soft for Specialized Systems</strong><br>
-          TS IN Ebda3 SOFT COMPANY</li><br>
-        <li><strong>Relations Manager at Al-Attas University</strong><br>
-          Managing communication and building relationships with various university departments.</li><br>
-        <li><strong>Development Residence</strong><br>
-          Responsible for managing relations and coordination with different entities.</li><br>
-        <li><strong>Relations Manager at Haridha Volunteer Student Forum</strong><br>
-          Organizing and managing communication among forum members and volunteers.</li><br>
-        <li><strong>Data Entry and Field Scanner for Family Care Association</strong><br>
-          Data entry and monitoring field operations to support association services.</li><br>
-        <li><strong>Member of Invisible Prog Technical Forum</strong><br>
-          Participated in discussions on advanced programming techniques.</li>
-      </ul>
+  <!-- About Section -->
+  <section class="section about-section" id="About">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Get to know more about my background and qualifications</p>
+      </div>
+      
+      <div class="about-container">
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="./img/midclg.jpg" alt="Ahmed Al-Attas" class="about-img" />
+            <div class="frame-decoration"></div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="info-card">
+            <h3 class="info-title"><i class="fas fa-user-circle"></i> Personal Information</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-user"></i> Full Name:</span>
+                <span class="info-value">Ahmed Mohammed Salem Al-Attas</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
+                <span class="info-value">+967716226912 / +967770985114</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
+                <span class="info-value">aahmedmohammed75@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3 class="info-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>Bachelor of Information Technology</h4>
+                <p class="timeline-duration">2020 - 2024 (Expected)</p>
+                <p>Hadhramaut University, College of Computer and IT</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3 class="info-title"><i class="fas fa-certificate"></i> Certifications</h3>
+            <div class="certifications">
+              <span class="cert-badge">Cybersecurity</span>
+              <span class="cert-badge">Artificial Intelligence</span>
+              <span class="cert-badge">Time Management</span>
+              <span class="cert-badge">Media & Data Literacy</span>
+              <span class="cert-badge">Social Confidence</span>
+              <span class="cert-badge">Device Protection</span>
+              <span class="cert-badge">Countering Digital Threats</span>
+            </div>
+            <p class="cert-org">By Evit Services, Top Arab Institute & others</p>
+          </div>
+          
+          <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-outline" target="_blank">
+            <i class="fas fa-file-download"></i> Download Full CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="Skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Technical expertise and professional abilities</p>
+      </div>
+      
+      <div class="skills-container">
+        <!-- Language Skills -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-language category-icon"></i>
+            <h3>Language Skills</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Arabic</span>
+                <span class="skill-level">Native - Excellent</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 100%;" data-width="100"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">English</span>
+                <span class="skill-level">Intermediate - Good</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%;" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technical Skills -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-laptop-code category-icon"></i>
+            <h3>Technical Skills</h3>
+          </div>
+          <div class="skills-grid">
+            <div class="tech-skill">
+              <i class="fab fa-python skill-icon"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-php skill-icon"></i>
+              <span>PHP</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fas fa-code skill-icon"></i>
+              <span>C#</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-dart skill-icon"></i>
+              <span>Dart</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fas fa-database skill-icon"></i>
+              <span>SQL Server</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fas fa-database skill-icon"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fas fa-database skill-icon"></i>
+              <span>Oracle</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fas fa-database skill-icon"></i>
+              <span>NoSQL</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-flutter skill-icon"></i>
+              <span>Flutter</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-laravel skill-icon"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-windows skill-icon"></i>
+              <span>ASP.NET</span>
+            </div>
+            <div class="tech-skill">
+              <i class="fab fa-git-alt skill-icon"></i>
+              <span>Git & GitHub</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Soft Skills -->
+        <div class="skill-category">
+          <div class="category-header">
+            <i class="fas fa-users category-icon"></i>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="soft-skills">
+            <div class="soft-skill">
+              <i class="fas fa-comments"></i>
+              <span>Communication</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-hands-helping"></i>
+              <span>Teamwork</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-clock"></i>
+              <span>Time Management</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-lightbulb"></i>
+              <span>Problem Solving</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-bolt"></i>
+              <span>Fast Learner</span>
+            </div>
+            <div class="soft-skill">
+              <i class="fas fa-exchange-alt"></i>
+              <span>Adaptability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience-section" id="Experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Experience <span>Works</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Professional journey and accomplishments</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Present</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">TS IN Ebda3 Soft Company</h3>
+            <p class="timeline-subtitle">Ebda3 Soft for Specialized Systems</p>
+            <p class="timeline-description">Technical support and system development in specialized software solutions.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Relations Manager</h3>
+            <p class="timeline-subtitle">Al-Attas University</p>
+            <p class="timeline-description">Managing communication and building relationships with various university departments.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Development Residence</h3>
+            <p class="timeline-subtitle">Coordination & Relations</p>
+            <p class="timeline-description">Responsible for managing relations and coordination with different entities.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Relations Manager</h3>
+            <p class="timeline-subtitle">Haridha Volunteer Student Forum</h3>
+            <p class="timeline-description">Organizing and managing communication among forum members and volunteers.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Data Entry & Field Scanner</h3>
+            <p class="timeline-subtitle">Family Care Association</p>
+            <p class="timeline-description">Data entry and monitoring field operations to support association services.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2021</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Technical Forum Member</h3>
+            <p class="timeline-subtitle">Invisible Prog Technical Forum</p>
+            <p class="timeline-description">Participated in discussions on advanced programming techniques and technologies.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2020</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Member</h3>
+            <p class="timeline-subtitle">Yemeni ICT Federation</p>
+            <p class="timeline-description">Contributor to the development and support of the technology sector in the community.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contacts" id="Contact">
-    <div class="contact-text">
-      <h2>Contact <span>Me</span></h2>
-      <h4>Let's Work Together</h4>
-      <div class="contact-list">
-        <li><i class='bx bxs-send'></i> <a href="mailto:aahmedmohammed75@gmail.com" style="color: #eee;">aahmedmohammed75@gmail.com</a></li>
-        <li><i class="bx bxs-phone-call"></i> +967716226912 / +967770985114</li>
+  <section class="section contact-section" id="Contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Let's work together on your next project</p>
       </div>
-      <div class="home-sci">
-        <a href="https://www.instagram.com/AHMED_ALATTAS910/" target="_blank"><i class='bx bxl-instagram'></i></a>
-        <a href="https://www.snapchat.com/add/a3ats" target="_blank"><i class='bx bxl-snapchat'></i></a>
-        <a href="https://api.whatsapp.com/send?phone=+967716226912" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-        <a href="https://github.com/5a3" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" target="_blank"><i class='bx bxl-facebook'></i></a>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email Address</h3>
+              <a href="mailto:aahmedmohammed75@gmail.com">aahmedmohammed75@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone Numbers</h3>
+              <p>+967716226912</p>
+              <p>+967770985114</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Location</h3>
+              <p>Yemen</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-contact">
+          <h3>Connect with me</h3>
+          <div class="social-buttons">
+            <a href="https://api.whatsapp.com/send?phone=+967716226912" class="social-btn whatsapp" target="_blank">
+              <i class='bx bxl-whatsapp'></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="social-btn instagram" target="_blank">
+              <i class='bx bxl-instagram'></i> Instagram
+            </a>
+            <a href="https://github.com/5a3" class="social-btn github" target="_blank">
+              <i class='bx bxl-github'></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="social-btn facebook" target="_blank">
+              <i class='bx bxl-facebook'></i> Facebook
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer style="text-align:center; padding: 20px; background:#222; color:#eee;">
-    &copy; All rights reserved to Ahmed Al-Attas
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Ahmed Al-Attas</h3>
+          <p>IT Engineer & Software Developer</p>
+        </div>
+        <div class="footer-links">
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Skills">Skills</a>
+          <a href="#Experience">Experience</a>
+          <a href="#Contact">Contact</a>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; <span id="currentYear"></span> All rights reserved to Ahmed Al-Attas</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="./files/script.js"></script>
 </body>
 </html>
