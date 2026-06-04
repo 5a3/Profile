@@ -1,87 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eng. Ahmed Mohammed Al-Attas | IT Engineer & Developer</title>
-  <meta name="description" content="Official website of Eng. Ahmed Mohammed Al-Attas - IT Engineer and Software Developer specializing in Flutter & Firebase" />
-  <meta name="author" content="Ahmed Mohammed Al-Attas" />
-  <meta property="og:title" content="Ahmed Mohammed Al-Attas" />
-  <meta property="og:description" content="IT Engineer specialized in app and web development - Flutter & Firebase" />
-  <meta property="og:url" content="https://5a3.github.io/Profile/" />
-  <meta name="keywords" content="Flutter, Firebase, Ahmed Al-Attas, IT Engineer, Software Developer, Yemen IT" />
+  <title>Eng. Ahmed Mohammed Al-Attas | Portfolio</title>
+  
+  <!-- Standard SEO Meta Tags -->
+  <meta name="description" content="Official professional portfolio of Eng. Ahmed Mohammed Al-Attas. IT Engineer, Advanced Network Administrator, and Mobile Application Developer specializing in Flutter framework." />
+  <meta name="keywords" content="Ahmed Mohammed Al-Attas, Ahmed Al-Attas, IT Engineer, Flutter Developer, Network Administrator, MikroTik, OpenWrt, Yemen, Hadhramaut, Portfolio" />
+  <meta name="author" content="Eng. Ahmed Mohammed Al-Attas" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook Meta Tags (For high-end social media preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/5a3" />
+  <meta property="og:title" content="Eng. Ahmed Mohammed Al-Attas | Portfolio" />
+  <meta property="og:description" content="Explore the technical portfolio of Eng. Ahmed Al-Attas - Specializing in IT solutions, mobile apps (Flutter), and enterprise network management." />
+  <meta property="og:image" content="./img/cropedpic.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ahmed Al-Attas Portfolio" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Eng. Ahmed Mohammed Al-Attas | Portfolio" />
+  <meta name="twitter:description" content="Explore the technical portfolio of Eng. Ahmed Al-Attas - Specializing in IT solutions, mobile apps (Flutter), and enterprise network management." />
+  <meta name="twitter:image" content="./img/cropedpic.jpg" />
+
+  <!-- Favicon & App Icons -->
   <link rel="shortcut icon" type="image/png" href="ic.png" />
-  <link rel="stylesheet" href="./files/style.css" />
+  <link rel="apple-touch-icon" href="ic.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./files/style.css" />
 </head>
 <body>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">Ahmed Al-Attas</a>
-      <div class="nav-menu" id="navMenu">
-        <a href="#Home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
-        <a href="#About" class="nav-link"><i class="fas fa-user"></i> About</a>
-        <a href="#Skills" class="nav-link"><i class="fas fa-code"></i> Skills</a>
-        <a href="#Experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
-        <a href="#Contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+      
+      <div class="nav-right">
+        <div class="nav-menu" id="navMenu">
+          <a href="#Home" class="nav-link active" data-lang-en="Home" data-lang-ar="الرئيسية">Home</a>
+          <a href="#About" class="nav-link" data-lang-en="About" data-lang-ar="من أنا">About</a>
+          <a href="#Skills" class="nav-link" data-lang-en="Skills" data-lang-ar="المهارات">Skills</a>
+          <a href="#Experience" class="nav-link" data-lang-en="Experience" data-lang-ar="الخبرات">Experience</a>
+          <a href="#Certificates" class="nav-link" data-lang-en="Certificates" data-lang-ar="الشهادات">Certificates</a>
+          <a href="#Contact" class="nav-link" data-lang-en="Contact" data-lang-ar="اتصل بي">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+          <button id="themeToggle" class="control-btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button id="langToggle" class="control-btn" title="Switch Language"><span>AR</span></button>
+          <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
       </div>
-      <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="Home">
-    <div class="hero-container">
+    <div class="container hero-container">
       <div class="hero-content">
-        <div class="text-animation">
-          <span class="greeting">Hello, It's Me</span>
-          <h1 class="hero-title">AHMED MOHAMMED<br><span class="highlight">AL-ATTAS</span></h1>
-          <div class="typing-container">
-            <span class="typed-text">I'm an </span>
-            <span class="auto-type"></span>
-          </div>
-          <p class="hero-subtitle">IT Engineer & Software Developer specialized in mobile and web applications</p>
-          
-          <div class="hero-buttons">
-            <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-primary" target="_blank">
-              <i class="fas fa-download"></i> Download CV
-            </a>
-            <a href="#Contact" class="btn-secondary">
-              <i class="fas fa-paper-plane"></i> Contact Me
-            </a>
-          </div>
-          
-          <div class="social-links">
-            <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="social-link" target="_blank" title="Instagram">
-              <i class='bx bxl-instagram'></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=+967716226912" class="social-link" target="_blank" title="WhatsApp">
-              <i class='bx bxl-whatsapp'></i>
-            </a>
-            <a href="https://github.com/5a3" class="social-link" target="_blank" title="GitHub">
-              <i class='bx bxl-github'></i>
-            </a>
-            <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="social-link" target="_blank" title="Facebook">
-              <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="https://www.snapchat.com/add/a3ats" class="social-link" target="_blank" title="Snapchat">
-              <i class='bx bxl-snapchat'></i>
-            </a>
-          </div>
+        <span class="greeting" data-lang-en="Hello, It's Me" data-lang-ar="مرحباً بك، أنا">Hello, It's Me</span>
+        <h1 class="hero-title">AHMED MOHAMMED<br><span class="highlight">AL-ATTAS</span></h1>
+        <div class="typing-container">
+          <span id="typingStatic" data-lang-en="I'm a " data-lang-ar="أنا ">I'm a </span>
+          <span class="auto-type"></span>
+        </div>
+        <p class="hero-subtitle" data-lang-en="A professional IT Engineer, Mobile Application Developer (Flutter), and Network Administrator dedicated to creating high-performance technical solutions." data-lang-ar="مهندس تقنية معلومات محترف، مطور تطبيقات هواتف ذكية (Flutter)، ومسؤول إدارة شبكات متقدمة يسعى لتقديم حلول برمجية متكاملة وعالية الكفاءة.">A professional IT Engineer, Mobile Application Developer (Flutter), and Network Administrator dedicated to creating high-performance technical solutions.</p>
+        
+        <div class="hero-buttons">
+          <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-primary" target="_blank">
+            <i class="fas fa-download"></i> <span data-lang-en="Download CV" data-lang-ar="تحميل السيرة الذاتية">Download CV</span>
+          </a>
+          <a href="#Contact" class="btn-secondary">
+            <i class="fas fa-paper-plane"></i> <span data-lang-en="Contact Me" data-lang-ar="تواصل معي">Contact Me</span>
+          </a>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="social-link" target="_blank"><i class='bx bxl-instagram'></i></a>
+          <a href="https://api.whatsapp.com/send?phone=+967716226912" class="social-link" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+          <a href="https://github.com/5a3" class="social-link" target="_blank"><i class='bx bxl-github'></i></a>
+          <a href="https://www.facebook.com/people/%D8%A3%D8%A2%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="social-link" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.snapchat.com/add/a3ats" class="social-link" target="_blank"><i class='bx bxl-snapchat'></i></a>
         </div>
       </div>
+      
       <div class="hero-image">
-        <div class="image-container">
+        <div class="image-wrapper">
           <img src="./img/cropedpic.jpg" alt="Ahmed Al-Attas" class="profile-img" />
-          <div class="image-overlay"></div>
-          <div class="floating-shape shape-1"></div>
-          <div class="floating-shape shape-2"></div>
-          <div class="floating-shape shape-3"></div>
         </div>
       </div>
     </div>
@@ -91,66 +110,37 @@
   <section class="section about-section" id="About">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Get to know more about my background and qualifications</p>
+        <h2 class="section-title" data-lang-en="About Me" data-lang-ar="من أنا">About Me</h2>
+        <p class="section-subtitle" data-lang-en="Professional summary and educational background" data-lang-ar="لمحة عامة عن المؤهلات والخبرات المهنية">Professional summary and educational background</p>
       </div>
       
       <div class="about-container">
         <div class="about-image">
           <div class="image-frame">
             <img src="./img/midclg.jpg" alt="Ahmed Al-Attas" class="about-img" />
-            <div class="frame-decoration"></div>
           </div>
         </div>
         <div class="about-content">
-          <div class="info-card">
-            <h3 class="info-title"><i class="fas fa-user-circle"></i> Personal Information</h3>
-            <div class="info-grid">
-              <div class="info-item">
-                <span class="info-label"><i class="fas fa-user"></i> Full Name:</span>
-                <span class="info-value">Ahmed Mohammed Salem Al-Attas</span>
+          <p class="about-description" data-lang-en="Information Technology Engineer with extensive expertise in full-stack software systems development, technical support engineering, and enterprise network management. Highly efficient in database configuration, systemic troubleshooting, and agile technical coordination." data-lang-ar="مهندس تقنية معلومات متمكن أمتلك خبرة واسعة وعميقة في مجالات تطوير الأنظمة البرمجية المتكاملة، الدعم الفني الهندسي، وإدارة شبكات المؤسسات. أتميز بكفاءة عالية في التعامل مع قواعد البيانات، استكشاف الأخطاء البرمجية وإصلاحها، والتنسيق الفني المرن.">
+            Information Technology Engineer with extensive expertise in full-stack software systems development, technical support engineering, and enterprise network management. Highly efficient in database configuration, systemic troubleshooting, and agile technical coordination.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-card-mini">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4 data-lang-en="Education" data-lang-ar="التعليم">Education</h4>
+                <p data-lang-en="Bachelor of Information Technology - Hadhramaut University" data-lang-ar="بكالوريوس تقنية معلومات - جامعة حضرموت">Bachelor of Information Technology - Hadhramaut University</p>
               </div>
-              <div class="info-item">
-                <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
-                <span class="info-value">+967716226912 / +967770985114</span>
-              </div>
-              <div class="info-item">
-                <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
-                <span class="info-value">aahmedmohammed75@gmail.com</span>
+            </div>
+            <div class="info-card-mini">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4 data-lang-en="Location" data-lang-ar="الموقع">Location</h4>
+                <p data-lang-en="Hadhramaut, Yemen" data-lang-ar="حضرموت، اليمن">Hadhramaut, Yemen</p>
               </div>
             </div>
           </div>
-          
-          <div class="info-card">
-            <h3 class="info-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4>Bachelor of Information Technology</h4>
-                <p class="timeline-duration">2020 - 2024 (Expected)</p>
-                <p>Hadhramaut University, College of Computer and IT</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <h3 class="info-title"><i class="fas fa-certificate"></i> Certifications</h3>
-            <div class="certifications">
-              <span class="cert-badge">Cybersecurity</span>
-              <span class="cert-badge">Artificial Intelligence</span>
-              <span class="cert-badge">Time Management</span>
-              <span class="cert-badge">Media & Data Literacy</span>
-              <span class="cert-badge">Social Confidence</span>
-              <span class="cert-badge">Device Protection</span>
-              <span class="cert-badge">Countering Digital Threats</span>
-            </div>
-            <p class="cert-org">By Evit Services, Top Arab Institute & others</p>
-          </div>
-          
-          <a href="https://drive.google.com/drive/folders/1tgOYqW8_yw40oDV1wuOw_U_7v1pm2lp9" class="btn-outline" target="_blank">
-            <i class="fas fa-file-download"></i> Download Full CV
-          </a>
         </div>
       </div>
     </div>
@@ -160,130 +150,42 @@
   <section class="section skills-section" id="Skills">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">My <span>Skills</span></h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Technical expertise and professional abilities</p>
+        <h2 class="section-title" data-lang-en="My Skills" data-lang-ar="المهارات التقنية">My Skills</h2>
+        <p class="section-subtitle" data-lang-en="Technical capabilities and systems proficiency" data-lang-ar="القدرات البرمجية والأنظمة التي أتقن العمل عليها">Technical capabilities and systems proficiency</p>
       </div>
       
-      <div class="skills-container">
-        <!-- Language Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-language category-icon"></i>
-            <h3>Language Skills</h3>
-          </div>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Arabic</span>
-                <span class="skill-level">Native - Excellent</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 100%;" data-width="100"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">English</span>
-                <span class="skill-level">Intermediate - Good</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 70%;" data-width="70"></div>
-              </div>
-            </div>
-          </div>
+      <div class="skills-modern-grid">
+        <div class="skill-modern-card">
+          <div class="card-icon-header"><i class="fas fa-mobile-alt"></i></div>
+          <h3 data-lang-en="Mobile & Frameworks" data-lang-ar="تطوير التطبيقات وإطارات العمل">Mobile & Frameworks</h3>
+          <ul class="skill-per-list">
+            <li><span>Flutter (Dart) Development</span><span class="per">90%</span></li>
+            <li><span>Laravel (PHP Framework)</span><span class="per">80%</span></li>
+            <li><span>Firebase Integration</span><span class="per">85%</span></li>
+            <li><span>ASP.NET Basics</span><span class="per">60%</span></li>
+          </ul>
         </div>
         
-        <!-- Technical Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-laptop-code category-icon"></i>
-            <h3>Technical Skills</h3>
-          </div>
-          <div class="skills-grid">
-            <div class="tech-skill">
-              <i class="fab fa-python skill-icon"></i>
-              <span>Python</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-php skill-icon"></i>
-              <span>PHP</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fas fa-code skill-icon"></i>
-              <span>C#</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-dart skill-icon"></i>
-              <span>Dart</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fas fa-database skill-icon"></i>
-              <span>SQL Server</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fas fa-database skill-icon"></i>
-              <span>MySQL</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fas fa-database skill-icon"></i>
-              <span>Oracle</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fas fa-database skill-icon"></i>
-              <span>NoSQL</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-flutter skill-icon"></i>
-              <span>Flutter</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-laravel skill-icon"></i>
-              <span>Laravel</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-windows skill-icon"></i>
-              <span>ASP.NET</span>
-            </div>
-            <div class="tech-skill">
-              <i class="fab fa-git-alt skill-icon"></i>
-              <span>Git & GitHub</span>
-            </div>
-          </div>
+        <div class="skill-modern-card">
+          <div class="card-icon-header"><i class="fas fa-server"></i></div>
+          <h3 data-lang-en="Databases & Networks" data-lang-ar="قواعد البيانات والشبكات">Databases & Networks</h3>
+          <ul class="skill-per-list">
+            <li><span>SQL Server / MySQL / Oracle</span><span class="per">85%</span></li>
+            <li><span>MikroTik Administration & Routing</span><span class="per">90%</span></li>
+            <li><span>OpenWrt Configuration</span><span class="per">80%</span></li>
+            <li><span>Git & GitHub Version Control</span><span class="per">85%</span></li>
+          </ul>
         </div>
         
-        <!-- Soft Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <i class="fas fa-users category-icon"></i>
-            <h3>Soft Skills</h3>
-          </div>
-          <div class="soft-skills">
-            <div class="soft-skill">
-              <i class="fas fa-comments"></i>
-              <span>Communication</span>
-            </div>
-            <div class="soft-skill">
-              <i class="fas fa-hands-helping"></i>
-              <span>Teamwork</span>
-            </div>
-            <div class="soft-skill">
-              <i class="fas fa-clock"></i>
-              <span>Time Management</span>
-            </div>
-            <div class="soft-skill">
-              <i class="fas fa-lightbulb"></i>
-              <span>Problem Solving</span>
-            </div>
-            <div class="soft-skill">
-              <i class="fas fa-bolt"></i>
-              <span>Fast Learner</span>
-            </div>
-            <div class="soft-skill">
-              <i class="fas fa-exchange-alt"></i>
-              <span>Adaptability</span>
-            </div>
-          </div>
+        <div class="skill-modern-card">
+          <div class="card-icon-header"><i class="fas fa-bolt"></i></div>
+          <h3 data-lang-en="Core Strengths" data-lang-ar="نقاط القوة المهنية">Core Strengths</h3>
+          <ul class="skill-per-list">
+            <li><span data-lang-en="Enterprise Technical Support" data-lang-ar="الدعم الفني المتقدم للمؤسسات">Enterprise Technical Support</span></li>
+            <li><span data-lang-en="System Troubleshooting & Fixes" data-lang-ar="تحليل واستكشاف الأخطاء البرمجية">System Troubleshooting & Fixes</span></li>
+            <li><span data-lang-en="Network Architecture Design" data-lang-ar="تصميم وإدارة البنى التحتية للشبكات">Network Architecture Design</span></li>
+            <li><span data-lang-en="Team Leadership & Collaboration" data-lang-ar="القيادة الفنية والعمل الجماعي">Team Leadership & Collaboration</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -293,73 +195,111 @@
   <section class="section experience-section" id="Experience">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Experience <span>Works</span></h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Professional journey and accomplishments</p>
+        <h2 class="section-title" data-lang-en="Professional Experience" data-lang-ar="الخبرات المهنية والأعمال">Professional Experience</h2>
+        <p class="section-subtitle" data-lang-en="Chronological timeline of my ongoing and past roles" data-lang-ar="سجل زمني لجميع أعمالي الحالية والسابقة بالتفصيل">Chronological timeline of my ongoing and past roles</p>
       </div>
       
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">Present</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">TS IN Ebda3 Soft Company</h3>
-            <p class="timeline-subtitle">Ebda3 Soft for Specialized Systems</p>
-            <p class="timeline-description">Technical support and system development in specialized software solutions.</p>
+      <div class="modern-timeline">
+        <!-- Job 1 (Current) -->
+        <div class="m-timeline-item current">
+          <div class="m-timeline-time" data-lang-en="2025 - Present (Current)" data-lang-ar="2025 - الحالي (مستمر)">2025 - Present (Current)</div>
+          <div class="m-timeline-content">
+            <span class="status-badge busy" data-lang-en="Ongoing" data-lang-ar="حالي">Ongoing</span>
+            <h3 data-lang-en="Technical Support Specialist (TS)" data-lang-ar="أخصائي دعم فني (TS)">Technical Support Specialist (TS)</h3>
+            <h4 data-lang-en="Ebda3 Soft Company for Specialized Systems" data-lang-ar="شركة إبداع سوفت للأنظمة الخاصة">Ebda3 Soft Company for Specialized Systems</h4>
+            <p data-lang-en="Deploying advanced structural technical support, executing detailed database optimization routines, and maintaining enterprise-level commercial and accounting solutions for clients." data-lang-ar="تقديم خدمات الدعم الفني الهندسي المتقدم للعملاء، صيانة وتحسين قواعد البيانات، ومعالجة وحل مشاكل الأنظمة المحاسبية والتجارية التابعة للمؤسسات بكفاءة عالية.">Deploying advanced structural technical support, executing detailed database optimization routines, and maintaining enterprise-level commercial and accounting solutions for clients.</p>
           </div>
         </div>
         
-        <div class="timeline-item">
-          <div class="timeline-date">2023</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Relations Manager</h3>
-            <p class="timeline-subtitle">Al-Attas University</p>
-            <p class="timeline-description">Managing communication and building relationships with various university departments.</p>
+        <!-- Job 2 (Current) -->
+        <div class="m-timeline-item current">
+          <div class="m-timeline-time" data-lang-en="2026 - Present (Current)" data-lang-ar="2026 - الحالي (مستمر)">2026 - Present (Current)</div>
+          <div class="m-timeline-content">
+            <span class="status-badge busy" data-lang-en="Ongoing" data-lang-ar="حالي">Ongoing</span>
+            <h3 data-lang-en="Marketer" data-lang-ar="مسؤول تسويق">Marketer</h3>
+            <h4 data-lang-en="BCash Wallet | Al Busairi International Bank" data-lang-ar="محفظة حاسب (BCash Wallet) | بنك البصيري الدولي">BCash Wallet | Al Busairi International Bank</h4>
+            <p data-lang-en="Developing and managing data-driven marketing campaigns, promoting digital wallet services, and building strategic consumer channels for corporate banking utilities." data-lang-ar="تخطيط وإدارة الحملات التسويقية والترويجية للخدمات المصرفية الرقمية ومحفظة حاسب الإلكترونية، وبناء قنوات ربط استراتيجية لتعزيز انتشار خدمات البنك."></p>
           </div>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2023</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Development Residence</h3>
-            <p class="timeline-subtitle">Coordination & Relations</p>
-            <p class="timeline-description">Responsible for managing relations and coordination with different entities.</p>
+
+        <!-- Job 3 (Current) -->
+        <div class="m-timeline-item current">
+          <div class="m-timeline-time" data-lang-en="2024 - Present (Current)" data-lang-ar="2024 - الحالي (مستمر)">2024 - Present (Current)</div>
+          <div class="m-timeline-content">
+            <span class="status-badge busy" data-lang-en="Ongoing" data-lang-ar="حالي">Ongoing</span>
+            <h3 data-lang-en="General Manager" data-lang-ar="المدير العام">General Manager</h3>
+            <h4 data-lang-en="Hashtag Net Network" data-lang-ar="شبكة هاشتاق نت (Hashtag Net)">Hashtag Net Network</h4>
+            <p data-lang-en="Overseeing full enterprise operations, network routing management, structural growth strategies, technical maintenance plans, and local distribution infrastructure optimization." data-lang-ar="إدارة وإشراف كامل على العمليات التشغيلية للشبكة، تصميم وتوجيه مسارات الشبكة وبنيتها التحتية، ووضع خطط الصيانة الفنية والتوزيع المحلي وتوسعة النطاق."></p>
           </div>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2022</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Relations Manager</h3>
-            <p class="timeline-subtitle">Haridha Volunteer Student Forum</h3>
-            <p class="timeline-description">Organizing and managing communication among forum members and volunteers.</p>
+
+        <!-- Job 4 -->
+        <div class="m-timeline-item">
+          <div class="m-timeline-time" data-lang-en="2023" data-lang-ar="2023">2023</div>
+          <div class="m-timeline-content">
+            <span class="status-badge completed" data-lang-en="Completed" data-lang-ar="منتهي">Completed</span>
+            <h3 data-lang-en="Relations Manager" data-lang-ar="مدير العلاقات العامة">Relations Manager</h3>
+            <h4 data-lang-en="Al-Attas University Dormitory for Development" data-lang-ar="سكن العطاس التنموي الجامعي">Al-Attas University Dormitory for Development</h4>
+            <p data-lang-en="Structured multi-institutional relations, optimized public outreach programs, and coordinated communication between student development boards and external socio-economic committees." data-lang-ar="تنظيم وإدارة العلاقات العامة بين السكن التنموي والمؤسسات الخارجية، وتنسيق الأنشطة والبرامج التنموية الموجهة لتطوير الطلاب برؤية تنظيمية متكاملة."></p>
           </div>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2022</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Data Entry & Field Scanner</h3>
-            <p class="timeline-subtitle">Family Care Association</p>
-            <p class="timeline-description">Data entry and monitoring field operations to support association services.</p>
+
+        <!-- Job 5 -->
+        <div class="m-timeline-item">
+          <div class="m-timeline-time" data-lang-en="2022" data-lang-ar="2022">2022</div>
+          <div class="m-timeline-content">
+            <span class="status-badge completed" data-lang-en="Completed" data-lang-ar="منتهي">Completed</span>
+            <h3 data-lang-en="Data Entry & Field Scanner" data-lang-ar="مدخل بيانات وماسح ميداني">Data Entry & Field Scanner</h3>
+            <h4 data-lang-en="Family Care Association (FCA)" data-lang-ar="جمعية رعاية الأسرة">Family Care Association (FCA)</h4>
+            <p data-lang-en="Conducted systemic field mapping, logged complex analytical population datasets, and handled advanced relational cloud data entry configurations." data-lang-ar="إجراء عمليات المسح الميداني الدقيق وجمع البيانات الإحصائية والتحليلية، وإدخالها وتنظيمها ضمن قواعد البيانات السحابية المعتمدة لدى الجمعية."></p>
           </div>
         </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2021</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Technical Forum Member</h3>
-            <p class="timeline-subtitle">Invisible Prog Technical Forum</p>
-            <p class="timeline-description">Participated in discussions on advanced programming techniques and technologies.</p>
+
+        <!-- Forum Memberships -->
+        <div class="m-timeline-item forums">
+          <div class="m-timeline-time" data-lang-en="Forums & Technical Unions" data-lang-ar="الملتقيات والعضويات النقابات">Forums & Technical Unions</div>
+          <div class="m-timeline-content">
+            <h3 data-lang-en="Professional Memberships" data-lang-ar="عضويات مهنية ومجتمعية نشطة">Professional Memberships</h3>
+            <p class="forum-p" data-lang-en="• Member of the Yemeni Federation for Information and Communications Technology (2020)<br>• Active Technical Member at Invisible Prog Technical Forum (2021)<br>• Public Relations Manager at Haridha Volunteer Student Forum (2022)" data-lang-ar="• عضو الجمعية اليمنية لتكنولوجيا المعلومات والاتصالات (2020)<br>• عضو تقني نشط في ملتقى Invisible Prog التقني (2021)<br>• مدير العلاقات العامة في ملتقى حريضة الطلابي التطوعي (2022)">
+              • Member of the Yemeni Federation for Information and Communications Technology (2020)<br>• Active Technical Member at Invisible Prog Technical Forum (2021)<br>• Public Relations Manager at Haridha Volunteer Student Forum (2022)
+            </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="section certificates-section" id="Certificates">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-lang-en="Certifications" data-lang-ar="الشهادات والدورات التدريبية">Certifications</h2>
+        <p class="section-subtitle" data-lang-en="Credentials and accredited professional training programs" data-lang-ar="الشهادات المعتمدة والبرامج التأهيلية التقنية التي حصلت عليها">Credentials and accredited professional training programs</p>
+      </div>
+      
+      <div class="certificates-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 data-lang-en="Cybersecurity Course" data-lang-ar="دورة الأمن السيبراني">Cybersecurity Course</h3>
+          <p data-lang-en="Accredited training in network defense vectors, systemic threat management, and data cryptographic basics." data-lang-ar="تدريب متقدم في حماية الشبكات والأنظمة، اكتشاف الثغرات الأمنية، وإدارة التهديدات والبيانات الحساسة لضمان أمان البنية التحتية."></p>
+        </div>
         
-        <div class="timeline-item">
-          <div class="timeline-date">2020</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Member</h3>
-            <p class="timeline-subtitle">Yemeni ICT Federation</p>
-            <p class="timeline-description">Contributor to the development and support of the technology sector in the community.</p>
-          </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <h3 data-lang-en="Artificial Intelligence Concept" data-lang-ar="مفاهيم وتقنيات الذكاء الاصطناعي">Artificial Intelligence Concept</h3>
+          <p data-lang-en="Comprehensive framework study on machine learning architecture, automated neural data chains, and analytical models." data-lang-ar="دراسة شاملة لتقنيات تعلم الآلة، هندسة الخوارزميات، وتوظيف النماذج الذكية في معالجة وتحليل البيانات الضخمة."></p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-cogs"></i></div>
+          <h3 data-lang-en="DotX pro Golden System" data-lang-ar="نظام دوت إكس برو الذهبي">DotX pro Golden System</h3>
+          <p data-lang-en="Specialized certification in managing administrative systems, Enterprise Resource Planning (ERP), and database syncing." data-lang-ar="شهادة تخصصية في إعداد وإدارة النظام الذهبي المحاسبي والإداري لإدارة الموارد وتشغيل وتجهيز قواعد البيانات المترابطة."></p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-user-lock"></i></div>
+          <h3 data-lang-en="Data Security & Device Protection" data-lang-ar="أمن البيانات وحماية الأجهزة">Data Security & Device Protection</h3>
+          <p data-lang-en="Practical methodologies for end-point hard drive validation, structural device armor deployment, and user policy audits." data-lang-ar="آليات تأمين البيانات والملفات الرقمية، وتطبيق سياسات حماية الأجهزة الإلكترونية والطرفيات ضد الاختراق والفقدان."></p>
         </div>
       </div>
     </div>
@@ -369,60 +309,43 @@
   <section class="section contact-section" id="Contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Contact <span>Me</span></h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Let's work together on your next project</p>
+        <h2 class="section-title" data-lang-en="Get In Touch" data-lang-ar="تواصل معي">Get In Touch</h2>
+        <p class="section-subtitle" data-lang-en="Let's build or manage your next technical project together" data-lang-ar="دعنا نناقش مشروعك القادم أو حلول شبكتك وأنظمتك البرمجية">Let's build or manage your next technical project together</p>
       </div>
       
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Email Address</h3>
+      <div class="contact-grid">
+        <div class="contact-methods">
+          <div class="c-method-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4 data-lang-en="Email Address" data-lang-ar="البريد الإلكتروني">Email Address</h4>
               <a href="mailto:aahmedmohammed75@gmail.com">aahmedmohammed75@gmail.com</a>
             </div>
           </div>
-          
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Phone Numbers</h3>
-              <p>+967716226912</p>
-              <p>+967770985114</p>
+          <div class="c-method-card">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4 data-lang-en="Call / Mobile Phone" data-lang-ar="رقم الجوال">Call / Mobile Phone</h4>
+              <p dir="ltr">+967 716226912 | 770985114</p>
             </div>
           </div>
-          
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Location</h3>
-              <p>Yemen</p>
+          <div class="c-method-card">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h4 data-lang-en="WhatsApp Support" data-lang-ar="الدعم الفني عبر واتساب">WhatsApp Support</h4>
+              <p dir="ltr">+967 770985114 / 716226912</p>
             </div>
           </div>
         </div>
         
-        <div class="social-contact">
-          <h3>Connect with me</h3>
-          <div class="social-buttons">
-            <a href="https://api.whatsapp.com/send?phone=+967716226912" class="social-btn whatsapp" target="_blank">
-              <i class='bx bxl-whatsapp'></i> WhatsApp
-            </a>
-            <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="social-btn instagram" target="_blank">
-              <i class='bx bxl-instagram'></i> Instagram
-            </a>
-            <a href="https://github.com/5a3" class="social-btn github" target="_blank">
-              <i class='bx bxl-github'></i> GitHub
-            </a>
-            <a href="https://www.facebook.com/people/%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="social-btn facebook" target="_blank">
-              <i class='bx bxl-facebook'></i> Facebook
-            </a>
+        <div class="contact-quick">
+          <h3 data-lang-en="Social Channels & Accounts" data-lang-ar="جميع حسابات التواصل الاجتماعي">Social Channels & Accounts</h3>
+          <div class="social-buttons-grid">
+            <a href="https://api.whatsapp.com/send?phone=+967770985114" class="s-btn whatsapp-color" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://github.com/5a3" class="s-btn github-color" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.instagram.com/AHMED_ALATTAS910/" class="s-btn instagram-color" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/people/%D8%A3%D8%A2%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%B3" class="s-btn facebook-color" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.snapchat.com/add/a3ats" class="s-btn snapchat-color" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a>
           </div>
         </div>
       </div>
@@ -432,29 +355,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <h3>Ahmed Al-Attas</h3>
-          <p>IT Engineer & Software Developer</p>
-        </div>
-        <div class="footer-links">
-          <a href="#Home">Home</a>
-          <a href="#About">About</a>
-          <a href="#Skills">Skills</a>
-          <a href="#Experience">Experience</a>
-          <a href="#Contact">Contact</a>
-        </div>
-        <div class="footer-copyright">
-          <p>&copy; <span id="currentYear"></span> All rights reserved to Ahmed Al-Attas</p>
-        </div>
-      </div>
+      <p>&copy; <span id="currentYear"></span> Eng. Ahmed Al-Attas. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
