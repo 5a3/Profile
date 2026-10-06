@@ -128,6 +128,10 @@ window.openProjectGallery = function(projectId) {
   const project = window.projectsData[projectId];
   if (!project) return;
 
+  const modal = document.getElementById('projectModal');
+  if (modal) modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
   const currentLang = document.documentElement.getAttribute('lang') || 'en';
   const title = currentLang === 'ar' ? project.titleAr : project.titleEn;
   
@@ -141,15 +145,18 @@ window.openProjectGallery = function(projectId) {
       : 'App screenshots & media gallery';
   }
 
-  // Base list of images from project config
+  // Base list of images from project config - loaded INSTANTLY
   const imagesToLoad = [...project.images];
   currentGalleryImages = imagesToLoad.map(img => project.folderPath + img);
   currentImageIndex = 0;
 
-  // Auto-probe candidate screenshot filenames
+  // Render initial configured images immediately with zero delay
+  renderGallery();
+
+  // Probe candidates asynchronously in background (limited to key standard patterns)
   const candidateNames = [];
-  for (let i = 1; i <= 10; i++) {
-    candidateNames.push(`screen${i}.png`, `screen${i}.jpg`, `screen${i}.jpeg`, `${i}.png`, `${i}.jpg`, `screenshot${i}.png`);
+  for (let i = 1; i <= 5; i++) {
+    candidateNames.push(`screen${i}.png`, `screen${i}.jpg`, `${i}.png`, `${i}.jpg`, `screenshot${i}.png`);
   }
   const probeList = candidateNames.filter(name => !imagesToLoad.includes(name));
 
@@ -163,10 +170,6 @@ window.openProjectGallery = function(projectId) {
     });
   });
 
-  // Render initial gallery immediately
-  renderGallery();
-
-  // If probed images are found, append them dynamically
   Promise.all(probePromises).then(results => {
     let added = false;
     results.forEach(validPath => {
@@ -179,10 +182,6 @@ window.openProjectGallery = function(projectId) {
       renderGallery();
     }
   });
-
-  const modal = document.getElementById('projectModal');
-  if (modal) modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
 };
 
 window.closeProjectGallery = function() {

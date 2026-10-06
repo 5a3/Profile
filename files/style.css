@@ -451,17 +451,71 @@ html { scroll-behavior: smooth; }
   object-fit: cover;
 }
 
-/* ====== RESPONSIVE ====== */
+/* ====== FULL RESPONSIVE FIXES ====== */
 @media (max-width: 992px) {
   .hero-container, .about-container, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-image { order: -1; display: flex; justify-content: center; }
   .profile-img { max-width: 260px; }
   .hero-title { font-size: 2.6rem; }
+  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }
+
 @media (max-width: 768px) {
-  .nav-menu { position: fixed; top: 73px; left: -100%; width: 100%; background: var(--bg-card); flex-direction: column; padding: 24px; border-bottom: 1px solid var(--border-color); transition: 0.3s; }
+  .section { padding: 80px 0 40px; }
+  .container { padding: 0 16px; }
+  
+  /* Navbar Mobile */
+  .nav-menu { position: fixed; top: 73px; left: -100%; width: 100%; background: var(--bg-card); flex-direction: column; padding: 24px; border-bottom: 1px solid var(--border-color); transition: 0.3s; box-shadow: var(--card-shadow); }
   .nav-menu.active { left: 0; }
   [dir="ar"] .nav-menu { left: auto; right: -100%; }
   [dir="ar"] .nav-menu.active { right: 0; }
   .menu-toggle { display: flex; }
+
+  /* Hero Mobile */
+  .hero { min-height: auto; padding-top: 100px; padding-bottom: 40px; }
+  .hero-title { font-size: 2.2rem; word-break: break-word; }
+  .typing-container { font-size: 1.2rem; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .social-links { flex-wrap: wrap; justify-content: center; }
+
+  /* Timeline adjustment for mobile */
+  .modern-timeline { border-left: 2px solid var(--border-color); padding-left: 20px; }
+  [dir="ar"] .modern-timeline { border-right: 2px solid var(--border-color); padding-right: 20px; }
+  .m-timeline-item::before { left: -29px; width: 14px; height: 14px; }
+  [dir="ar"] .m-timeline-item::before { right: -29px; left: auto; }
+  .m-timeline-content { padding: 20px; }
+  .status-badge { position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 8px; }
+  [dir="ar"] .status-badge { left: 0; }
+  .m-timeline-content h3 { padding-left: 0; padding-right: 0; font-size: 1.1rem; }
+  [dir="ar"] .m-timeline-content h3 { padding-left: 0; padding-right: 0; }
+
+  /* Project Cards on Mobile */
+  .project-actions { flex-direction: column; width: 100%; gap: 10px; }
+  .btn-project-play, .btn-project-gallery { width: 100%; justify-content: center; }
+  .project-banner { padding: 24px 16px 16px; }
+
+  /* Gallery Modal Mobile Fixes */
+  .modal-dialog { max-height: 95vh; margin: 10px; border-radius: 16px; }
+  .modal-header { padding: 14px 16px; }
+  .modal-body { padding: 16px; gap: 14px; }
+  .gallery-main-view { min-height: 220px; padding: 8px; }
+  .gallery-image-frame img { max-height: 320px; }
+  .gallery-nav-btn { width: 36px; height: 36px; font-size: 0.9rem; }
+  .gallery-nav-btn.prev { left: 8px; }
+  .gallery-nav-btn.next { right: 8px; }
+  [dir="ar"] .gallery-nav-btn.prev { right: 8px; left: auto; }
+  [dir="ar"] .gallery-nav-btn.next { left: 8px; right: auto; }
+  .thumb-item { width: 50px; height: 50px; }
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: 1.75rem; }
+  .hero-title { font-size: 1.8rem; }
+  .logo { font-size: 1.2rem; }
+  .nav-controls { gap: 6px; }
+  .control-btn { width: 36px; height: 36px; }
+  .social-buttons-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+  .project-tags { gap: 6px; }
+  .tag-pill { font-size: 0.72rem; padding: 3px 8px; }
 }
