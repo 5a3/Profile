@@ -98,3 +98,161 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// ====== FEATURED PROJECTS & DYNAMIC GALLERY SYSTEM ======
+window.projectsData = {
+  waslli: {
+    titleEn: 'Wasl Li Delivery Platform',
+    titleAr: 'تطبيق وصل لي لتوصيل الطعام والطلبات',
+    folderPath: './img/projects/waslli/',
+    images: ['waslli_logo.png']
+  },
+  jahez: {
+    titleEn: 'Jahez Business Suite',
+    titleAr: 'تطبيق جاهز لمحلات الخياطة والخدمات',
+    folderPath: './img/projects/jahez/',
+    images: ['jahez_logo.png']
+  },
+  mystatus: {
+    titleEn: 'MyStatus - Media Manager',
+    titleAr: 'تطبيق محمل الحالات الذكي',
+    folderPath: './img/projects/mystatus/',
+    images: ['mystatus_logo.png']
+  }
+};
+
+let currentGalleryImages = [];
+let currentImageIndex = 0;
+
+window.openProjectGallery = function(projectId) {
+  const project = window.projectsData[projectId];
+  if (!project) return;
+
+  const currentLang = document.documentElement.getAttribute('lang') || 'en';
+  const title = currentLang === 'ar' ? project.titleAr : project.titleEn;
+  
+  const modalTitle = document.getElementById('modalProjectTitle');
+  const modalSubtitle = document.getElementById('modalProjectSubtitle');
+  
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalSubtitle) {
+    modalSubtitle.textContent = currentLang === 'ar' 
+      ? 'معرض صور ومشاهد التطبيق' 
+      : 'App screenshots & media gallery';
+  }
+
+  // Base list of images from project config
+  const imagesToLoad = [...project.images];
+  currentGalleryImages = imagesToLoad.map(img => project.folderPath + img);
+  currentImageIndex = 0;
+
+  // Auto-probe candidate screenshot filenames
+  const candidateNames = [];
+  for (let i = 1; i <= 10; i++) {
+    candidateNames.push(`screen${i}.png`, `screen${i}.jpg`, `screen${i}.jpeg`, `${i}.png`, `${i}.jpg`, `screenshot${i}.png`);
+  }
+  const probeList = candidateNames.filter(name => !imagesToLoad.includes(name));
+
+  let probePromises = probeList.map(name => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      const path = project.folderPath + name;
+      img.onload = () => resolve(path);
+      img.onerror = () => resolve(null);
+      img.src = path;
+    });
+  });
+
+  // Render initial gallery immediately
+  renderGallery();
+
+  // If probed images are found, append them dynamically
+  Promise.all(probePromises).then(results => {
+    let added = false;
+    results.forEach(validPath => {
+      if (validPath && !currentGalleryImages.includes(validPath)) {
+        currentGalleryImages.push(validPath);
+        added = true;
+      }
+    });
+    if (added) {
+      renderGallery();
+    }
+  });
+
+  const modal = document.getElementById('projectModal');
+  if (modal) modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeProjectGallery = function() {
+  const modal = document.getElementById('projectModal');
+  if (modal) modal.classList.remove('active');
+  document.body.style.overflow = '';
+};
+
+window.navigateGallery = function(direction) {
+  if (currentGalleryImages.length === 0) return;
+  currentImageIndex = (currentImageIndex + direction + currentGalleryImages.length) % currentGalleryImages.length;
+  updateGalleryDisplay();
+};
+
+window.selectGalleryImage = function(index) {
+  if (index >= 0 && index < currentGalleryImages.length) {
+    currentImageIndex = index;
+    updateGalleryDisplay();
+  }
+};
+
+function renderGallery() {
+  const thumbnailsContainer = document.getElementById('galleryThumbnails');
+  if (!thumbnailsContainer) return;
+  
+  thumbnailsContainer.innerHTML = '';
+
+  currentGalleryImages.forEach((imgSrc, index) => {
+    const thumb = document.createElement('div');
+    thumb.className = `thumb-item ${index === currentImageIndex ? 'active' : ''}`;
+    thumb.onclick = () => window.selectGalleryImage(index);
+
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = `Thumbnail ${index + 1}`;
+
+    thumb.appendChild(img);
+    thumbnailsContainer.appendChild(thumb);
+  });
+
+  updateGalleryDisplay();
+}
+
+function updateGalleryDisplay() {
+  const mainImg = document.getElementById('galleryMainImg');
+  if (mainImg && currentGalleryImages.length > 0) {
+    mainImg.src = currentGalleryImages[currentImageIndex];
+  }
+
+  const thumbs = document.querySelectorAll('.thumb-item');
+  thumbs.forEach((thumb, idx) => {
+    if (idx === currentImageIndex) {
+      thumb.classList.add('active');
+      thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    } else {
+      thumb.classList.remove('active');
+    }
+  });
+}
+
+// Global keyboard accessibility for modal gallery
+document.addEventListener('keydown', function(e) {
+  const modal = document.getElementById('projectModal');
+  if (modal && modal.classList.contains('active')) {
+    if (e.key === 'Escape') {
+      window.closeProjectGallery();
+    } else if (e.key === 'ArrowLeft') {
+      window.navigateGallery(-1);
+    } else if (e.key === 'ArrowRight') {
+      window.navigateGallery(1);
+    }
+  }
+});
